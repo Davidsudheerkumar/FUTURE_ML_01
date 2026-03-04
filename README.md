@@ -15,19 +15,19 @@ Sales forecasting helps businesses:
 This project demonstrates how Machine Learning can support real business planning.
 
 ---
+## 📁 Dataset Information
 
-## 📦 Dataset
+Dataset Used: Store Sales – Time Series Forecasting (Kaggle)
 
-Dataset Used:  
-**Store Sales – Time Series Forecasting (Kaggle)**  
+Files Used:
+- train.csv → Historical daily sales data
+- stores.csv → Store information
+- items.csv → Product information
 
-Link:  
-https://www.kaggle.com/competitions/store-sales-time-series-forecasting  
+Target Variable:
+- Sales (Daily Store Sales)
 
-The dataset contains historical daily sales data from multiple stores and product categories.
-
-Due to file size limitations, the dataset is not included in this repository.  
-You can download it directly from Kaggle and upload it into Google Colab to run the notebook.
+The dataset contains historical sales data used to predict future demand.
 
 ---
 
@@ -70,8 +70,18 @@ Used a time-based split (80% training, 20% testing).
 
 No random shuffling was applied to avoid data leakage.
 
-### 5️⃣ Model Building
-A Linear Regression model was used as a baseline forecasting model.
+## 🤖 Model Used
+
+Model: Linear Regression
+
+Reason:
+Linear Regression was chosen to capture the overall sales trend over time.
+
+Features Used:
+- Time_Index (trend feature)
+
+Target:
+- Daily Sales
 
 ### 6️⃣ Model Evaluation
 
@@ -137,6 +147,14 @@ FUTURE_ML_01
 3. Upload dataset files  
 4. Run all cells sequentially  
 
+---
+## 🧹 Data Preprocessing
+
+✔ Converted 'date' column to datetime format  
+✔ Aggregated daily sales  
+✔ Checked and handled missing values  
+✔ Created time-based features (Year, Month, Day)  
+✔ Created Time Index feature for trend modeling  
 ---
 
 ## ✅ Conclusion
